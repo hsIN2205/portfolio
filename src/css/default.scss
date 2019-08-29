@@ -1,0 +1,235 @@
+@import "color";
+@import "font";
+
+/* default */
+
+$font-stack: 'Montserrat','Noto Sans KR','Monoton','Pacifico',sans-serif;
+
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    // font:100% $font-stack;
+    box-sizing: border-box;
+}
+a { text-decoration: none; }
+ul,
+dl,
+dt,
+dd { padding:0;
+     margin:0;  
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end:0; 
+}
+.clearfix:after,
+.section:after { 
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; 
+}
+::selection {
+    background-color: rgb(238, 238, 238);
+    color: #f02c46;
+}
+
+/* 삭제가능 */
+
+.box{
+    background-color: #fff;
+    width: 96%;
+    margin: 1.5rem auto 3rem;
+    border-radius:8px;
+    overflow: hidden;
+    box-shadow:0 8px 9px -5px rgba(0,0,0,0.2), 
+               0 15px 22px 2px rgba(0,0,0,0.14), 
+               0 6px 28px 5px rgba(0,0,0,0.12);
+    
+    ul,
+    ol,
+    div{
+        padding:0.22rem 1rem 1.5rem;
+    }
+    h1{
+        padding: 20px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        background-color: #6c5ce7;
+        color: #fff;
+
+    }
+    $color:#ff7675;
+    h2{
+        padding:12px;
+        text-transform: uppercase;
+        color: $color;
+        border-bottom:1px solid $color;
+        margin-bottom:26px;
+        margin-top:30px;
+        &:first-of-type{
+            margin-top: 0;
+        }
+    }
+}
+
+
+$i:0;
+
+/* button */
+// button[type=button],
+button{
+    display:block;
+    margin-bottom: 20px;/*display, margin 지우기*/
+    border: 0 none;
+    font-weight: 400;
+    background-color: #b2bec3;
+    color:#333;
+    cursor: pointer;
+    text-align: center;
+    -moz-box-pack: start; 
+    -webkit-box-pack: start; 
+    -moz-box-align: center; 
+    -webkit-box-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: .38rem .86rem;
+    transition: .4s cubic-bezier(.4,0,.2,1);
+    box-shadow:0 3px 1px -2px rgba(0,0,0,0.2),
+                        0 2px 2px 0 rgba(0,0,0,0.14),
+                        0 1px 5px 0 rgba(0,0,0,0.12);
+    &:active,
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        box-shadow: none;
+    }
+
+}
+
+
+@each 
+$name, $bgcolor, $color in 
+(primary, $primary-color , white),
+(success, $success-color ,white),
+(warning, $warning-color , white),
+(danger, $danger-color ,white),
+(light, $light-color , black),
+(dark, $dark-color ,white),
+(purple, $purple-color ,white)
+    {
+        .#{$name}{
+            background-color: $bgcolor;
+            color:$color;
+            &:hover{
+                background-color: rgba($bgcolor,0.65);
+            }
+        }
+        .#{$name}-outline{
+            background:none;
+            border: 1px solid $bgcolor;
+            color:$bgcolor;
+            &:hover{
+                border-color: rgba($bgcolor,0.65);
+                background-color: rgba($bgcolor,0.1);
+            }
+        }
+        .#{$name}-flat{
+            background:none;
+            color:$bgcolor;
+            &:hover{
+                background-color: rgba($bgcolor,0.2);
+                color: $bgcolor;
+            }
+        }
+        .tag{
+            display: inline-block;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-size: 12px;     
+            background-color:#f1f1f1;
+            color: #e74c3c;
+        }  
+        .tag-#{$name}{
+            background-color:$bgcolor;
+            color: $color;
+        }
+    }
+
+
+
+/* font */
+
+@while $i < 100{
+        .font-size#{$i}{
+            font-size: 12+$i + px;
+            $i : $i +1;
+        }
+ }
+
+
+
+/* box-shadow */
+
+@mixin box-shadow($shadows...) {
+    -moz-box-shadow:$shadows;
+    -webkit-box-shadow:$shadows;
+    box-shadow:$shadows;
+}
+
+$sd-op1:rgba(0,0,0,0.2);
+$sd-op2:rgba(0,0,0,0.14);
+$sd-op3:rgba(0,0,0,0.12);
+
+.box{
+    div{
+        display: flex;
+        width: 100px;
+        height: 100px;
+        margin: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.shadow1{
+    @include box-shadow(0 2px 1px -1px $sd-op1, 
+                        0 1px 1px 0 $sd-op2, 
+                        0 1px 3px 0 $sd-op3)
+}
+.shadow2{
+    @include box-shadow(0 3px 3px -2px $sd-op1,
+                        0 3px 4px 0 $sd-op2,
+                        0 1px 8px 0 $sd-op3)
+}
+.shadow3{
+    @include box-shadow(0 3px 5px -1px $sd-op1, 
+                        0 5px 8px 0 $sd-op2, 
+                        0 1px 14px 0 $sd-op3)
+}
+.shadow4{
+    @include box-shadow(0 5px 5px -3px $sd-op1, 
+                        0 8px 10px 1px $sd-op2, 
+                        0 3px 14px 2px $sd-op3)
+}
+.shadow5{
+    @include box-shadow(0 6px 7px -4px $sd-op1, 
+                        0 11px 15px 1px $sd-op2, 
+                        0 4px 20px 3px $sd-op3)
+}
+.shadow6{
+    @include box-shadow(0 8px 9px -5px $sd-op1, 
+                        0 15px 22px 2px $sd-op2, 
+                        0 6px 28px 5px $sd-op3)
+}
+
