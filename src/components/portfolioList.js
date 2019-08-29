@@ -14,10 +14,8 @@ class PortfolioList extends Component {
         { name: 'Investors', selected: false },
         { name: 'Service Providers', selected: false}
       ],
-
     }
   }
-
 
   _tabClick = (categoryIndex) => {
     this.props.tabClick(categoryIndex)
@@ -78,7 +76,7 @@ class PortfolioList extends Component {
     }
     let lists = [];
     let data = this.props.data;
-    for(let i=0; i < data.length; i++){
+    for (let i = 0; i < data.length; i++) {
       lists.push( 
         <PfItem
           key={data[i].id}
@@ -89,13 +87,13 @@ class PortfolioList extends Component {
           desc={data[i].desc}
           skill={data[i].skill}
           itemClick={() => this.props.itemClick(data[i])}
-        >
-        </PfItem>
-        );
+        />
+      );
     }
+
     return (
       <div className="content">
-        <Tab data={this.state.category} tabClick={this._tabClick}></Tab>
+        <Tab data={this.state.category} tabClick={this._tabClick} />
         <Slider {...settings} className="pf-list">
             {lists}
         </Slider>
