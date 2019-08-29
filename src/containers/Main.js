@@ -14,8 +14,6 @@ import Modal from 'react-modal';
 import PortfolioData from '../assets/data/portfolio.json';
 
 // styles
-import '../assets/css/default.scss';
-import '../assets/css/style.scss';
 const customStyles = {
   content: {
     top:              '4vh',
