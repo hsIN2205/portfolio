@@ -1,55 +1,43 @@
 import React, { Component } from "react";
 
-var aText = new Array(
-  "be a designer"
-  //,  
-  );
-  var iSpeed = 100; // time delay of print out
-  
-  var iArrLength = aText[0].length; // the length of the text array
-  var iScrollAt = 20; // start scrolling up at this many lines
-   
-  var iTextPos = 0; // initialise text position
-  var sContents = ''; // initialise contents variable
-  var iRow; // initialise current row
-
-
-
 class Aboutme extends Component {
 
   state = {
-    typedtext:''
+    typedtext: ''
   }
 
   clearText = () => {
-    this.setState({ typedtext: ''})
+    this.setState({ typedtext: '' })
   }
-    typewriter = () => {
-      
-      let iIndex = 0; // start printing array at this posision
-      sContents =  ' ';
-      iRow = Math.max(0, iIndex-iScrollAt);
-      
-      while ( iRow < iIndex ) {
-       sContents += aText[iRow++] + '<br />';
-      }
-      
-      const typedtext = sContents + aText[iIndex].substring(0, iTextPos) ;
-      // + "_"
-      this.setState({ typedtext });
-      if ( iTextPos++ == iArrLength ) {
-       iTextPos = 0;
-       iIndex++;
-       if ( iIndex != aText.length ) {
+
+  typewriter = () => {
+    let aText = ['be a designer'];
+    let iIndex = 0; // start printing array at this posision
+    let iSpeed = 100; // time delay of print out
+    let iArrLength = aText[0].length; // the length of the text array
+    let iScrollAt = 20; // start scrolling up at this many lines
+    let iTextPos = 0; // initialise text position
+    let sContents = ' ';  // initialise contents variable
+    let iRow = Math.max(0, iIndex-iScrollAt); // initialise current row
+    
+    while ( iRow < iIndex ) {
+      sContents += aText[iRow++] + '<br />';
+    }
+    
+    const typedtext = sContents + aText[iIndex].substring(0, iTextPos) ;
+    this.setState({ typedtext });
+    
+    if ( iTextPos++ === iArrLength ) {
+      iTextPos = 0;
+      iIndex++;
+      if ( iIndex !== aText.length ) {
         iArrLength = aText[iIndex].length;
         setTimeout(() => this.typewriter(), 500);
-       }
-      } else {
-      //  setTimeout("typewriter()", iSpeed);
-        setTimeout(() => this.typewriter(), iSpeed);
       }
+    } else {
+      setTimeout(() => this.typewriter(), iSpeed);
     }
-
+  }
 
   render() {
     const{ typedtext } = this.state;
@@ -77,7 +65,5 @@ class Aboutme extends Component {
     );
   }
 }
-
-
 
 export default Aboutme;

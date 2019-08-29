@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Modal from 'react-modal';
-import PortfolioData from '../data/portfolio.json';
+// import PortfolioData from '../data/portfolio.json';
 
 // const customStyles = {
 //   content : {
@@ -154,7 +154,7 @@ class Work extends Component{
       return(
         <div className="work">
          <ul>
-           <li onClick={() => this.props.openModal('work')} >
+           <li onClick={() => this.props.openModal('work')}>
              <a className="work-sec1">
                <span>work</span>
              </a>
