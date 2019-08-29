@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Modal from 'react-modal';
-// import PortfolioData from '../data/portfolio.json';
+// import PortfolioData from '../assets/data/portfolio.json';
 
 // const customStyles = {
 //   content : {

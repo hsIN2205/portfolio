@@ -3,32 +3,15 @@ import React, { Component } from "react";
 // components
 import Hindex from './components/Hindex';
 import Work from './components/Work';
-import Nav from './components/Nav';
 import Aboutme from './components/Aboutme';
-
-// externals
-import { PageSlides, SlideParallaxType } from "react-page-slides";
-import Modal from 'react-modal';
+import Main from './containers/Main';
 
 // data
-import PortfolioData from './data/portfolio.json';
+import PortfolioData from './assets/data/portfolio.json';
 
 // styles
-import "./css/default.scss";
-import "./css/style.scss";
-const customStyles = {
-  content : {
-    top : '4vh',
-    left : '10vw',
-    right : 'auto',
-    bottom : 'auto',
-    transform: 'translate(2vw, 2vh)',
-    width:'80vw',
-    height:'92vh',
-    backgroundColor:'#fff',
-    overflowY: 'scroll'
-  }
-};
+import './assets/css/default.scss';
+import './assets/css/style.scss';
 
 class App extends Component {
   state = {
@@ -70,7 +53,7 @@ class App extends Component {
     });
 
     if (changedPage === 1) {
-      this.child.clearText();
+      this.child.setTypedtext('');
       setTimeout(() => {
         this.child.typewriter();
       }, 700); 
@@ -173,7 +156,8 @@ class App extends Component {
 
     return (
       <div id="root" className="App">
-        <Nav 
+        <Main />
+        {/* <Nav 
           page={page}
           onClick={this.navClick}
         />
@@ -197,7 +181,7 @@ class App extends Component {
         >
           {view}
           <a onClick={this.closeModal} className="btn-close"><i className="fa fa-times"></i></a>
-        </Modal>
+        </Modal> */}
       </div>
     );
   }
