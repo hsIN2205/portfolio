@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-// routes
-import Routes from './routes';
+// containers
+import Main from './containers/Main';
 
 // styles
 import './assets/css/default.scss';
@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div id="root" className="App">
-        <Routes />
+        <Main />
       </div>
     );
   }
