@@ -7,6 +7,7 @@
     "classnames": "^2.2.6",
     "core-js": "2",
     "font-awesome": "^4.7.0",
+    "gh-pages": "^2.1.1",
     "i": "^0.3.6",
     "node-sass": "^4.12.0",
     "npm": "^6.9.2",
@@ -46,5 +47,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage" : "http://hsIN2205.github.io/portfolio"
+  "homepage": "http://hsIN2205.github.io/portfolio"
 }
