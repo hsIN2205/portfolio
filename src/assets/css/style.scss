@@ -257,32 +257,18 @@ $minWidth, $maxWidth, $circelSize in
 }
 
 @media (min-width: 210px) and (max-width: 575.98px) {
-    .nav{display: none;}
-
-    .scollDown{
-        margin-left:-4em;
-    }
-
     .work ul {
         display: block!important;
             li{
             width: 100%!important;
             max-width: 100%!important;
-            height: 30vh;
-            padding-top:3vh;
-            a{
-                &::before{
-                    width: 120px!important;
-                    height: 120px!important;
-                }
-            }
         }
     }
 
     .aboutMe{ 
         .subTxt{
             width: 80%!important;
-            font-size: 30px!important;
+            font-size: 42px!important;
             margin-bottom: 3rem!important;
             &::after{
                 content: "";
@@ -296,12 +282,11 @@ $minWidth, $maxWidth, $circelSize in
         .about-content{
             display: block!important;
             li{
-                margin-bottom: 10px!important;
-                font-size: 0.9em!important;
+            margin-bottom: 10px!important;
+            font-size: 1.2em!important;
             }
         }
     }
-
 }
 
 
@@ -344,9 +329,9 @@ $minWidth, $maxWidth, $circelSize in
     }
     .subTxt{
         width: 50%;
-        font-size: 48px; //72px
+        font-size: 72px;
         font-weight: bold;
-        margin-bottom:6rem;
+        margin-bottom:10rem;
         line-height: 1.5;
         font-family: $font-title;
         // .active & {
@@ -373,7 +358,7 @@ $minWidth, $maxWidth, $circelSize in
                 text-align: center;
                 margin-bottom:40px;
                 color:#d2c0d2;
-                font-size: 1.2em;
+                font-size: 1.6em;
                 span{
                     color:#fff;
                     font-weight: 500;
@@ -487,7 +472,7 @@ $minWidth, $maxWidth, $circelSize in
                 justify-content: center;
                 color:#fff;
                 margin: 26px auto 0;
-                font-size: 24px;
+                font-size: 36px;
                 position: relative;
                 &::before{
                     content: "";
@@ -518,11 +503,11 @@ $minWidth, $maxWidth, $circelSize in
                     }
                 }
                 
-                // &:hover::after,
-                // &:focus::after{
-                //     content: "";
-                //     @include hoverAnimation(60%, -10%, 120%);
-                // }
+                &:hover::after,
+                &:focus::after{
+                    content: "";
+                    @include hoverAnimation(60%, -10%, 120%);
+                }
             }
         }
     }

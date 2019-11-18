@@ -156,17 +156,17 @@ class Work extends Component{
          <ul>
            <li onClick={() => this.props.openModal('work')} >
              <a className="work-sec1">
-               <span>work</span>
+               <span>Work</span>
              </a>
            </li>
            <li>
              <a href="/img/resume.pdf" download className="work-sec2">
-               <span>resume</span>
+               <span>Resume</span>
              </a>
            </li>
            <li>
              <a className="work-sec3" href="mailto:hshehehe1128@gmail.com">
-               <span>contect</span>
+               <span>Contect</span>
              </a>
            </li>
          </ul>
