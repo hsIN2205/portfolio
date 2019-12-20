@@ -20,7 +20,7 @@ class Hindex extends Component {
   render() {
     return (
       <section className="main">
-        <div className="logo">WD.<span>hsIN</span></div>
+        <div className="logo">WD.<span>hsINTTTTTT</span></div>
         <div className="slogan">
           <span className="sp1">I</span>
           <span className="sp2"> a</span>
