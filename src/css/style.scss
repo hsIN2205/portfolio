@@ -222,7 +222,7 @@ $i : $i +1;
 
 @each 
 $minWidth, $maxWidth, $circelSize in 
-(210px, 575.98px, 200),
+(210px, 575.98px, 300),
 (576px, 767.98px, 360),
 (768px, 991.98px, 540),
 (992px, 1199.98px, 760),
@@ -238,10 +238,10 @@ $minWidth, $maxWidth, $circelSize in
         line-height: 1.14;
         text-align: center;
         & span{
-            font-size:($circelSize / 8)+ px;
+            font-size:($circelSize / 6.5)+ px;
         }
         & span:nth-child(n+4):nth-child(-n+15){
-            font-size:($circelSize / 5)+ px;
+            font-size:($circelSize / 4.5)+ px;
             color: rgba(0,0,0,0.2);
              -webkit-text-stroke:1px #fff;
         }
@@ -252,57 +252,10 @@ $minWidth, $maxWidth, $circelSize in
     .aboutMe h2{
         font-size:($circelSize / 15)+ px;
     }
+    
  }
- 
 }
 
-@media (min-width: 210px) and (max-width: 575.98px) {
-    .nav{display: none;}
-
-    .scollDown{
-        margin-left:-4em;
-    }
-
-    .work ul {
-        display: block!important;
-            li{
-            width: 100%!important;
-            max-width: 100%!important;
-            height: 30vh;
-            padding-top:3vh;
-            a{
-                &::before{
-                    width: 120px!important;
-                    height: 120px!important;
-                }
-            }
-        }
-    }
-
-    .aboutMe{ 
-        .subTxt{
-            width: 80%!important;
-            font-size: 30px!important;
-            margin-bottom: 3rem!important;
-            &::after{
-                content: "";
-                width: 50px;
-                height: 2px;
-                background-color: #fff;
-                display: block;
-                margin: 3rem auto 0;
-            }
-        }
-        .about-content{
-            display: block!important;
-            li{
-                margin-bottom: 10px!important;
-                font-size: 0.9em!important;
-            }
-        }
-    }
-
-}
 
 
 
@@ -517,7 +470,7 @@ $minWidth, $maxWidth, $circelSize in
                         background-image: url('../img/icon-work3.svg');
                     }
                 }
-                
+
                 // &:hover::after,
                 // &:focus::after{
                 //     content: "";
@@ -544,14 +497,14 @@ $minWidth, $maxWidth, $circelSize in
     .btn-close{
         position: fixed;
         right:4vw;
-        top:6vh;
+        top:4vh;
         background: none;
         box-shadow: none;
         cursor: pointer;
         font-size: 1.5em;
     }
     .secTitle{
-        font-size: 3em;
+        font-size: 2.2em;
         border-bottom:1px solid #c7c7c7;
         padding-bottom:16px;
         margin-bottom:30px;
@@ -571,13 +524,14 @@ $minWidth, $maxWidth, $circelSize in
                     position: relative;
                     &:hover,
                     &:focus{
-                        color:#60bb0f;
+                        // color:#60bb0f;
+                        font-weight: bold;
                     }
-                    &:hover::after,
-                    &:focus::after{
-                        content: "";
-                        @include hoverAnimation(50%, -2%, 104%);
-                    }
+                    // &:hover::after,
+                    // &:focus::after{
+                    //     content: "";
+                    //     @include hoverAnimation(50%, -2%, 104%);
+                    // }
                 }
             }
         }
@@ -591,9 +545,13 @@ $minWidth, $maxWidth, $circelSize in
                 .pfContent{
                     float: left;
                     width: 50%;
+                    padding-right:20px;
                     z-index:800;
+                    .date{
+                        font-size: 0.9em;
+                    }
                     h3{
-                        font-size: 1.9em;
+                        font-size: 1.4em;
                         color:#333;
                         margin-bottom:12px;
                     }
@@ -610,10 +568,9 @@ $minWidth, $maxWidth, $circelSize in
                         }
                     }
                     .description{
-                        font-size: 1.2em;
+
                     }
                     .use-skills{
-                        font-size: 1.2em;
                         margin-top:16px;
                         &::before{
                             content: "Skills : ";
@@ -627,30 +584,30 @@ $minWidth, $maxWidth, $circelSize in
                 .pfImg{
                     width: 50%;
                     overflow: hidden;
-                    &::before{
-                        content: "";
-                        width: 500px;
-                        height: 500px;
-                        background-color: #9366e90a;
-                        display: block;
-                        border-radius: 250px;
-                        position: absolute;
-                        top:50%;
-                        left: 50%;
-                        transform: translate(-0%, -20%)
-                    }
-                    &::after{
-                        content: "";
-                        width: 500px;
-                        height: 500px;
-                        display: block;
-                        border-radius: 250px;
-                        border:1px solid #e6b9f3;
-                        position: absolute;
-                        top:50%;
-                        left: 50%;
-                        transform: translate(-3%, -25%);
-                    }
+                    // &::before{
+                    //     content: "";
+                    //     width: 500px;
+                    //     height: 500px;
+                    //     background-color: #9366e90a;
+                    //     display: block;
+                    //     border-radius: 250px;
+                    //     position: absolute;
+                    //     top:50%;
+                    //     left: 50%;
+                    //     transform: translate(-0%, -20%)
+                    // }
+                    // &::after{
+                    //     content: "";
+                    //     width: 500px;
+                    //     height: 500px;
+                    //     display: block;
+                    //     border-radius: 250px;
+                    //     border:1px solid #e6b9f3;
+                    //     position: absolute;
+                    //     top:50%;
+                    //     left: 50%;
+                    //     transform: translate(-3%, -25%);
+                    // }
                     & img{
                         display: block;
                         max-width: 100%;
@@ -681,6 +638,113 @@ $minWidth, $maxWidth, $circelSize in
         }
     }
 }
+
+
+
+
+@media (min-width: 210px) and (max-width: 575.98px) {
+    .nav{display: none;}
+    .logo{font-size: 20px;}
+    .scollDown{
+        margin-left:-4em;
+    }
+    
+
+    .aboutMe{ 
+        .subTxt{
+            width: 80%!important;
+            font-size: 24px!important;
+            margin-bottom: 3rem!important;
+            line-height: 1.2!important;
+            &::after{
+                content: "";
+                width: 50px;
+                height: 2px;
+                background-color: #fff;
+                display: block;
+                margin: 3rem auto 0;
+            }
+        }
+        .about-content{
+            display: block!important;
+            li{
+                margin-bottom: 10px!important;
+                font-size: 0.9em!important;
+            }
+        }
+    }
+    
+    .working{
+        font-size: 12px;
+        .secTitle{
+            font-size: 1.5em;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .trigger li a{padding: 4px 10px!important;}
+        .working-content{
+            margin-top:30px!important;
+            li{
+                padding:0!important;
+                flex-direction: column;
+                .pfContent{
+                    float:none!important;
+                    width: 100%!important;
+                    margin-bottom:2em;
+                    padding-right:0!important;
+                }
+                .pfImg{
+                    width: 100%!important;
+                }
+            }
+        }
+    }
+
+    .modal {
+        .btn-close{
+            top:2vh;
+            font-size: 1.2em;
+        }
+    }
+}
+
+
+
+@each 
+$minWidth, $maxWidth, $ImgSize in 
+(210px, 575.98px, 120),
+(576px, 767.98px, 180),
+(768px, 991.98px, 200),{
+ @media (min-width: $minWidth) and (max-width: $maxWidth) {
+
+    .work ul {
+        display: block!important;
+            li{
+            width: 100%!important;
+            max-width: 100%!important;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+                font-size: 18px;
+                &::before{
+                    width: $ImgSize+px;
+                    height: $ImgSize+px;
+                    display: inline-block;
+                    transition: all 1s;
+                }
+                span{
+                    display: block;
+                }
+            }
+        }
+    }
+ }
+}
+
+
+
 
 
 // @keyframes
