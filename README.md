@@ -26,10 +26,10 @@
 # 배포하는법
 
   (처음할 때) 
-    1. npm install yarn
-    2. npm install gh-pages
+  0. npm install yarn gh-pages react-scripts
 
-- gh-pages -d build
+1. react-scripts build
+2. gh-pages -d build
 
 
 # 할일
