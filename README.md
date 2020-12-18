@@ -15,6 +15,9 @@
 6. git push
   - 만약에 push 안되면 git push -u origin master
 
+# 반영하는법
+* gh-pages -d build
+
 # 할일
 
 - eslint href 수정
