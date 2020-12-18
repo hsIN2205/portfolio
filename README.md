@@ -1,6 +1,6 @@
 # 실행하는법
 
-1. git clone https://github.com/hsIN2205/portfolio.git
+1. git clone
 2. cd 다운받은폴더
 3. npm install
 4. npm start
