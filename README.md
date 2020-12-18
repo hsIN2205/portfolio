@@ -1,9 +1,14 @@
-# 실행하는법
+# 다운받는법
 
 1. git clone https://github.com/hsIN2205/portfolio.git
 2. cd 다운받은폴더
-3. npm install
-4. npm start
+
+
+# 실행하는법(npm기준)
+
+1. npm install
+2. npm start
+
 
 # 수정한거 올리기전에
 
@@ -15,8 +20,13 @@
 6. git push
   - 만약에 push 안되면 git push -u origin master
 
+
 # 반영하는법
-* gh-pages -d build
+
+1. npm install yarn
+2. npm install gh-pages
+3. gh-pages -d build
+
 
 # 할일
 
