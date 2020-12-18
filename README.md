@@ -29,7 +29,7 @@
     1. npm install yarn
     2. npm install gh-pages
 
-1. gh-pages -d build
+- gh-pages -d build
 
 
 # 할일
@@ -37,5 +37,5 @@
 - eslint href 수정
   - a 태그 안쓰는걸로 바꾸거나 오류 메시지 없애기
 
-
-[사이트URL](https://hsin2205.github.io/portfolio/)
+# 사이트URL
+:star: <https://hsin2205.github.io/portfolio/>
