@@ -128,14 +128,14 @@ $name, $bgcolor, $color in
 (dark, $dark-color ,white),
 (purple, $purple-color ,white)
     {
-        .#{$name}{
+        .#{"" + $name}{
             background-color: $bgcolor;
             color:$color;
             &:hover{
                 background-color: rgba($bgcolor,0.65);
             }
         }
-        .#{$name}-outline{
+        .#{"" + $name}-outline{
             background:none;
             border: 1px solid $bgcolor;
             color:$bgcolor;
@@ -144,7 +144,7 @@ $name, $bgcolor, $color in
                 background-color: rgba($bgcolor,0.1);
             }
         }
-        .#{$name}-flat{
+        .#{"" + $name}-flat{
             background:none;
             color:$bgcolor;
             &:hover{
@@ -160,7 +160,7 @@ $name, $bgcolor, $color in
             background-color:#f1f1f1;
             color: #e74c3c;
         }  
-        .tag-#{$name}{
+        .tag-#{"" + $name}{
             background-color:$bgcolor;
             color: $color;
         }

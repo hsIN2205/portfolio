@@ -3,20 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.19.2",
     "classnames": "^2.2.6",
-    "core-js": "2",
+    "core-js": "^2.6.12",
+    "eslint": "^7.15.0",
     "font-awesome": "^4.7.0",
     "i": "^0.3.6",
-    "node-sass": "^4.12.0",
-    "npm": "^6.9.2",
-    "paper": "^0.12.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-modal": "^3.8.1",
+    "node-sass": "^5.0.0",
+    "npm": "^6.14.9",
+    "paper": "^0.12.11",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-modal": "^3.12.1",
     "react-onepage": "^1.1.0",
     "react-page-slides": "^0.1.3",
-    "react-scripts": "^3.0.0",
+    "react-scripts": "^3.4.4",
     "react-slick": "^0.24.0",
     "react-spring": "7",
     "slick-carousel": "^1.8.1",
@@ -48,5 +49,16 @@
   "homepage": "http://hsin2205.github.io/portfolio",
   "devDependencies": {
     "gh-pages": "^2.2.0"
+  },
+  "description": "1. git clone https://github.com/hsIN2205/portfolio.git 2. cd 다운받은폴더",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsIN2205/portfolio.git"
+  },
+  "author": "hs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hsIN2205/portfolio/issues"
   }
 }

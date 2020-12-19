@@ -167,7 +167,7 @@ class Work extends Component{
            </li>
            <li>
              <a className="work-sec3" href="mailto:hshehehe1128@gmail.com">
-               <span>Contect</span>
+               <span>Contact</span>
              </a>
            </li>
          </ul>
